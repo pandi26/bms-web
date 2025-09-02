@@ -1,0 +1,64 @@
+/* AdminWarranty.css */
+
+.admin-warranty-container {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    min-height: 100vh;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .warranty-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .warranty-table th,
+  .warranty-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .warranty-table th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .warranty-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  /* styles/AdminWarranty.css */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.approve-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.reject-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.approve-btn:hover {
+  background-color: #45a049;
+}
+
+.reject-btn:hover {
+  background-color: #e53935;
+}

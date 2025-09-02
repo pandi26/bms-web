@@ -1,0 +1,138 @@
+/* Centering the login page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4; /* Light background */
+  background-image: url("signup.png");
+}
+
+/* Login Card */
+.login-card {
+  width: 350px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Form Styling */
+.login-form .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* User Icon */
+.user-ico {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.user-ico:hover {
+  color: #007bff;
+}
+
+/* Popup Card */
+.popup-card {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup-card.active {
+  display: flex;
+}
+
+.popup-card p {
+  margin: 5px 0;
+  padding: 8px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup-card p:hover {
+  background: #ddd;
+}
+
+/* Message Card */
+.message-card {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Signup Link */
+.signup-link {
+  margin-top: 15px;
+}
+
+.signup-link-text {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link-text:hover {
+  text-decoration: underline;
+}
+/* Error message styling */
+.error-text {
+  color: #721c24;
+  background-color: #f8d7da;
+  padding: 5px;
+  margin-top: 15px;
+  font-size: 12px;
+  border-radius: 5px;
+}

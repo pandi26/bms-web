@@ -1,0 +1,215 @@
+
+/* user icon */
+.user-prof{
+    color: #fff;
+    background-color: #fff;
+}
+/* Add to your Navbar.css file */
+.uart-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .uart-button.connected {
+    background-color: green;
+    color: white;
+  }
+  
+  .uart-button.disconnected {
+    background-color: red;
+    color: white;
+  }
+  
+  .uart-button:hover {
+    opacity: 0.8;
+  }
+  
+.user-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color:whitesmoke;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  .user-icon:hover{
+    color: blue;
+  }
+/* General Reset */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar Container */
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Left Side: UART Button */
+.left-side {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+/* Navbar Logo (eLAICLE BMS) Centered */
+/* Navbar Logo */
+.navbar-logo {
+    background-image: url('clogo.png');
+    background-size: contain;        /* Ensures the whole logo fits */
+    background-repeat: no-repeat;    /* Prevents tiling */
+    background-position: center;     /* Centers the logo */
+    width: 150px;
+    margin-right: 200px;                    /* Set a reasonable width */
+    height: 60px;                    /* Adjust height as needed */
+    cursor: pointer;
+    margin: 0 auto;
+    text-indent: -9999px; 
+    margin: 0 auto;
+margin-right: 500px;
+           /* Hide text if any */
+}
+
+
+.navbar-logo:hover {
+     color: #f44336; 
+}
+
+/* Navbar Menu (Links) Centered */
+.navbar-menu {
+    list-style: none;
+    padding-left: 10px;
+    margin: 0;
+    display: contents;
+    gap: 30px;
+    /*transition: max-height 0.3s ease, background-color 0.3s ease;*/
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Navbar Link */
+.navbar-link {
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+.navbar-link:hover {
+    background-color: #555;
+    /* color: #00bcd4; */
+}
+
+/* Right Side: User Profile */
+.right-side {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* UART Button */
+.uart-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.uart-button.connected {
+    background-color: #4CAF50;
+}
+
+.uart-button.disconnected {
+    background-color: #f44336;
+}
+
+/* Removed hover effects */
+/* .uart-button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+} */
+
+/* Active/Focused State for Buttons */
+.uart-button:focus, .navbar-link:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-logo {
+        font-size: 18px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .left-side, .right-side {
+        margin: 10px 0;
+    }
+
+    .navbar-menu.active {
+        display: block;
+    }
+}
+
+/* Smooth transition for the navbar background when scrolling */
+.navbar.scrolled {
+    background-color: #222;
+}
+
+/* Hide navbar when scrolling down */
+.navbar.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Show navbar */
+.navbar {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}

@@ -1,0 +1,101 @@
+.battery-balance-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.message.success {
+  background-color: #d4edda;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  color: #155724;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tips-table, .balance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tips-table th, .balance-table th, 
+.tips-table td, .balance-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.balance-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.balance-button:hover {
+  background-color: #0056b3;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+}
+
+.status-badge.needs {
+  background-color: #dc3545; /* Red */
+}
+
+.status-badge.balanced {
+  background-color: #28a745; /* Green */
+}
+
+.high-temp {
+  background-color: #fff3cd; /* Light yellow warning row */
+}
+
+.warning {
+  color: #856404;
+  background-color: #fff3cd;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.good {
+  color: #155724;
+  background-color: #d4edda;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.already-balanced {
+  font-weight: bold;
+  color: #28a745;
+}

@@ -1,0 +1,57 @@
+.technician-profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .technician-profile-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+  }
+  
+  .profile-detail {
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f4f6f8;
+    border-left: 4px solid #3498db;
+    border-radius: 5px;
+  }
+  
+  .profile-detail strong {
+    color: #34495e;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  .button-group {
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .go-back {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .logout {
+    background-color: #dc3545;
+    color: white;
+  }
+  

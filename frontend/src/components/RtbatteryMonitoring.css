@@ -1,0 +1,141 @@
+.battery-monitoring-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.monitoring-title {
+  text-align: center;
+  color: #2d3748;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.connection-status {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.control-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.start-button {
+  background: #48bb78;
+  color: white;
+}
+
+.start-button:hover {
+  background: #38a169;
+  transform: translateY(-2px);
+}
+
+.stop-button {
+  background: #f56565;
+  color: white;
+}
+
+.stop-button:hover {
+  background: #e53e3e;
+  transform: translateY(-2px);
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.battery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.battery-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.battery-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.data-point {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.data-label {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.data-value {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .battery-monitoring-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .monitoring-title {
+    font-size: 2rem;
+  }
+
+  .battery-grid {
+    grid-template-columns: 1fr;
+  }
+}

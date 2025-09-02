@@ -1,0 +1,227 @@
+/* ========== Info Card Styling ========== */
+.info-card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .info-card {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    width: 300px;
+    transition: all 0.3s ease;
+  }
+  
+  .info-card h4 {
+    margin-bottom: 10px;
+  }
+  
+  .info-card p {
+    margin: 5px 0;
+  }
+  
+  .info-card button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* ========== Input Group Styling ========== */
+  .inputGroup, .inputGroup1, .inputGroup2, .inputGroup3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .inputGroup label,
+  .inputGroup1 label,
+  .inputGroup2 label,
+  .inputGroup3 label {
+    min-width: 150px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .inputGroup input,
+  .inputGroup1 input,
+  .inputGroup2 input,
+  .inputGroup3 input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s;
+  }
+  
+  .inputGroup input:focus,
+  .inputGroup1 input:focus,
+  .inputGroup2 input:focus,
+  .inputGroup3 input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+  
+  .inputGroup p,
+  .inputGroup1 p,
+  .inputGroup2 p,
+  .inputGroup3 p {
+    min-width: 100px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* ========== Parameter Groups ========== */
+  .parameterGroups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 20px;
+    background-color: #fcfdf8;
+    max-width: 1200px;
+    margin: 30px auto;
+  }
+  
+  /* ========== Parameter Sections ========== */
+  .parameterSection,
+  .parameterSection1,
+  .parameterSection2,
+  .parameterSection3,
+  .parameterSection4,
+  .parameterSection5,
+  .parameterSection6,
+  .parameterSection7 {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 300px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 10px;
+  }
+  
+  .parameterSection h3,
+  .parameterSection1 h3,
+  .parameterSection2 h3,
+  .parameterSection3 h3,
+  .parameterSection4 h3,
+  .parameterSection5 h3,
+  .parameterSection6 h3,
+  .parameterSection7 h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .parameterSection input,
+  .parameterSection1 input,
+  .parameterSection2 input,
+  .parameterSection3 input,
+  .parameterSection4 input,
+  .parameterSection5 input,
+  .parameterSection6 input,
+  .parameterSection7 input {
+    width: 100%;
+    max-width: 80px;
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    opacity: 0.9;
+  }
+  
+  /* Fine-tuned Input Margin Adjustments */
+  .parameterSection input       { margin-left: 90px; }
+  .parameterSection1 input      { margin-left: 56px; }
+  .parameterSection2 input      { margin-left: -15px; }
+  .parameterSection3 input      { margin-left: 10px; }
+  .parameterSection4 input      { margin-left: 48px; }
+  .parameterSection5 input      { margin-left: -35px; }
+  .parameterSection6 input      { margin-left: 0; }
+  .parameterSection7 input      { margin-left: 48px; }
+  
+  /* ========== Button Styling ========== */
+  .setButton,
+  button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .setButton:hover,
+  button:hover {
+    background: #45a049;
+  }
+  
+  /* Special Positioning (may need to be optimized for responsiveness) */
+  .suv2   { margin-left: 600px; margin-top: -370px; }
+  .suv23  { margin-left: 600px; margin-top: -260px; }
+  .suv234 { margin-left: 600px; margin-top: -310px; }
+  
+  /* ========== Popup Overlay ========== */
+  .popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popupContent {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    animation: popupFadeIn 0.4s ease;
+  }
+  
+  @keyframes popupFadeIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+  }
+  
+  /* ========== Close Button ========== */
+  .closeButton {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .closeButton:hover {
+    background: #ff1a1a;
+  }
+  

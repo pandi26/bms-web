@@ -1,0 +1,151 @@
+.technician-warranty-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tech-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tech-actions button {
+    margin-left: 10px;
+  }
+  
+  .logout-btn,
+  .back-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-btn {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .back-btn {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .warranty-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .warranty-table th,
+  .warranty-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .warranty-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .approve-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .reject-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  /* Interactive Table Design */
+.warranty-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .warranty-table th,
+  .warranty-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  
+  .warranty-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .warranty-table td {
+    color: #555;
+  }
+  
+  .warranty-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .warranty-table tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .warranty-table tr:active {
+    background-color: #e6e6e6;
+  }
+  
+  .warranty-table td {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .warranty-table .action-buttons button {
+    transition: all 0.3s ease;
+  }
+  
+  .warranty-table td .approve-btn:hover {
+    background-color: #27ae60;
+  }
+  
+  .warranty-table td .reject-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  .warranty-table td button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  @media (max-width: 768px) {
+    .warranty-table th,
+    .warranty-table td {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .warranty-table {
+      font-size: 12px;
+    }
+  }
+  

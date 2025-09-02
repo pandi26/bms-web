@@ -1,0 +1,88 @@
+
+.cmh1{
+    margin-top: 20px;
+    width: 400px;
+}
+.cmh2{
+    margin-top: 20px;
+    width: 400px;
+    margin-left: 10px;
+}
+.parmeterSection input {
+    width: 50%;  /* Makes the input field take full width */
+    max-width: 80px; /* Adjusts max width */
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    opacity: 0.8;
+    margin-left: 90px;
+  }
+  .parmeterSection h2{
+    margin-left: -900px;
+  }
+  .ButtonSet{
+    background-color: rgb(56, 56, 156);
+    border-radius: 2px;
+    border: 2px solid #ccc;
+    width: 70px;
+  }
+  .parmeterSection1 input {
+    width: 50%;  /* Makes the input field take full width */
+    max-width: 80px; /* Adjusts max width */
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    opacity: 0.8;
+    margin-left:100px;
+  }
+  .parmeterSection2 input {
+    width: 50%;  /* Makes the input field take full width */
+    max-width: 80px; /* Adjusts max width */
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    opacity: 0.8;
+    margin-left:75px;
+  }
+  .parmeterSection3 input {
+    width: 50%;  /* Makes the input field take full width */
+    max-width: 80px; /* Adjusts max width */
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    opacity: 0.8;
+    margin-left:85px;
+  }
+  .parmeterSection4 input {
+    width: 50%;  /* Makes the input field take full width */
+    max-width: 80px; /* Adjusts max width */
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    opacity: 0.8;
+    margin-left:155px;
+  }
+  .rrightside{
+    margin-left: 600px;
+    margin-top: -320px;
+  }
+  .lleftside{
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  .rightside h2{
+    margin-left: -300px;
+  }
+  .bottom{
+    margin-top: 100px;
+   
+    gap: 20px;
+  }
+  .bbottom{
+  margin-left: 150px;
+  }

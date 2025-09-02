@@ -1,0 +1,148 @@
+/* link conditions */
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .link:hover {
+    transform: scale(1.05);
+   
+  }
+  
+  .icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+  }
+  
+
+
+
+/* Button Styles */
+.btn {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 18px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* container */
+
+.container{
+    margin-top: 160px;
+    
+}
+
+/* Main Battery Info Layout */
+.battery-info {
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   
+    gap: 25px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 1300px; /* Limit the overall width */
+    max-height: 400px; /* Limit the overall height */
+}
+
+/* Card Styles */
+.battery-info div {
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 100%; /* Fill the available column space */
+    height: auto; /* Allow height to adjust dynamically */
+    min-height: 200px; /* Minimum height for cards */
+    max-width: 320px; /* Ensure cards don't become too wide */
+    max-height: 300px; /* Ensure cards don't become too tall */
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer;
+    background-color: #f9f9f9;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    text-align: center;
+}
+
+.battery-info div:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #e0f7fa; /* Highlight on hover */
+}
+
+/* Icon Styles */
+.icon {
+    font-size: 55px; /* Icon size */
+    color: #4CAF50; /* Icon color */
+    margin-bottom: 12px; /* Space below the icon */
+}
+
+/* Header Styles */
+h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Card Hover Effects */
+.real-time-battery, .battery-health, .charging-status, .historical-data, .battery-balancing, 
+.alerts, .remote-monitor, .battery-diagnostics, .configuration-settings {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.real-time-battery:hover, .battery-health:hover, .charging-status:hover, .historical-data:hover, 
+.battery-balancing:hover, .alerts:hover, .remote-monitor:hover, .battery-diagnostics:hover, 
+.configuration-settings:hover {
+    background-color: #e0f7fa;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+    .battery-info {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+
+    .battery-info div {
+        max-width: 280px;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .battery-info {
+        grid-template-columns: 1fr; /* 1 column for smaller screens */
+    }
+
+    .battery-info div {
+        max-width: 100%;
+        min-height: 180px;
+    }
+}

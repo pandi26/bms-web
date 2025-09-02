@@ -1,0 +1,131 @@
+/* General container styling */
+.user-profile-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #ffffff, #f7f8fc);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 -8px 20px rgba(255, 255, 255, 0.5);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.user-profile-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Header styling */
+.user-profile-container h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+/* User information styling */
+.user-profile-container p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Section spacing */
+.user-profile-container p + p {
+  margin-top: 15px;
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Back and Logout button styling */
+button {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.back-button {
+  background: linear-gradient(145deg, #36d1dc, #5b86e5);
+}
+
+.back-button:hover {
+  background: linear-gradient(145deg, #5b86e5, #36d1dc);
+  box-shadow: 0 6px 15px rgba(91, 134, 229, 0.3);
+}
+
+.logout-button {
+  background: linear-gradient(145deg, #ff6b6b, #ff4b4b);
+}
+
+.logout-button:hover {
+  background: linear-gradient(145deg, #ff4b4b, #ff6b6b);
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Loading message styling */
+.loading-message {
+  font-size: 18px;
+  font-weight: 500;
+  color: #888;
+  margin-top: 40px;
+  text-align: center;
+  animation: fade-in 1.5s ease infinite;
+}
+
+/* Error message styling */
+.error-message {
+  font-size: 18px;
+  color: #e74c3c;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: center;
+  animation: fade-in 1.5s ease infinite;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-profile-container {
+    padding: 20px;
+  }
+
+  .user-profile-container h3 {
+    font-size: 24px;
+  }
+
+  .user-profile-container p {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

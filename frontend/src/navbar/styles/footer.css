@@ -1,0 +1,118 @@
+.app-footer {
+  margin-left: 252px;
+  padding: 0px 280px ;
+  border-top: 1px solid #ddd;
+}
+.battery-id-block h5 {
+  margin-bottom: 4px; /* adds a small gap below the label */
+}
+
+
+.flex-container {
+  display: flex;
+  padding-right: 220px;
+  flex-direction: row;
+  justify-content: space-between; /* 👈 ensures spacing between items */
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.flex-item1 {
+  display: flex;
+  padding-right: -100px;
+  flex-direction: row;
+  align-items: center;
+  margin: 0  0px;
+}
+
+.flex-item img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.flex-item1 h5 {
+  margin: 0px 9px;
+  padding-left: -10px;
+  font-size: 14px;
+}
+.flex-item2{
+    padding-left: -30px;
+}
+.flex-item3{
+    padding-left: -10px;
+}
+.flex-item select,
+.comm-btn {
+  margin-top: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.flex-container{
+    margin-left: -170px;
+}.comm-popup {
+  position: fixed;
+  bottom: 80px;
+  left: 60%;
+  transform: translateX(-50%);
+ 
+  
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-content select,
+.popup-content button {
+  padding: 6px;
+  font-size: 14px;
+}
+
+.comm-popup {
+  position: fixed;
+  top: 20%;
+  left: 56%;
+ color: black;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 8px;
+ 
+}
+
+.popup-content {
+  min-width: 300px;
+  position: relative;
+}
+
+.popup-content label {
+  display: block;
+  margin-top: 10px;
+}
+
+.popup-content select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 4px;
+}
+/* 🔳 Full-screen blurred background overlay */
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px); /* 🔁 Actual blur */
+  background-color: rgba(0, 0, 0, 0.3); /* Optional darkening */
+  z-index: 9998; /* Just below the popup */
+}

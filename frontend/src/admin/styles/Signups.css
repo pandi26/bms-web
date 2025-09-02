@@ -1,0 +1,112 @@
+/* General Error Message Styling */
+.error-message {
+  color: #d9534f;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 5px;
+  background: rgba(217, 83, 79, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Signup Form Container */
+.signup-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins', sans-serif;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+/* Signup Form Flex Layout */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Form Group Styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  color: #222;
+  font-size: 1rem;
+}
+
+/* Input & Textarea Styling */
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.6);
+  outline: none;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Submit Button with Gradient */
+.submit-button {
+  padding: 12px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #0056b3, #004494);
+  transform: scale(1.02);
+}
+
+/* Login Link Styling */
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .signup-container {
+      padding: 25px;
+      margin: 30px auto;
+  }
+
+  .submit-button {
+      font-size: 1.1rem;
+      padding: 14px;
+  }
+}

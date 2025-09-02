@@ -1,0 +1,101 @@
+/* Container */
+.technician-management {
+  padding: 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+.technician-management h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Loading and Error States */
+.loading, .error, .no-data {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 20px;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* Table Container */
+.table-container {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* For responsiveness */
+}
+
+/* Technician Table */
+.technician-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.technician-table th,
+.technician-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.technician-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+.technician-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.technician-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action Buttons */
+.icon-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.icon-btn.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.icon-btn.delete:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .technician-table {
+    font-size: 0.85rem;
+  }
+
+  .technician-table th,
+  .technician-table td {
+    padding: 8px;
+  }
+
+  .icon-btn {
+    padding: 5px 8px;
+  }
+}

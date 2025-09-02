@@ -1,0 +1,202 @@
+/* App.css */
+/* General styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100pvh;
+  margin-top: 100px;
+  background-color: #f4f7fa;
+}
+
+.app-header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Navbar styles
+.navbar {
+  background-color: #333;
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  margin-top: 160px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.navbar ul li a:hover {
+  color: #4caf50;
+} */
+
+/* Main content area */
+.app-main {
+  margin: 20px;
+  padding-bottom: 20px;
+  padding-top: -20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1460px;
+  max-height: 1900px;
+  margin-bottom: 150px;
+  height: 1100px;
+}
+
+.dashboard h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.battery-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -20px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.battery-info div {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  margin-right: 10px;
+  margin-bottom: 10px; /* Ensure space between rows on smaller screens */
+}
+
+.battery-info div:last-child {
+  margin-right: 0; /* Remove the margin from the last item */
+}
+
+.battery-info h3 {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.battery-info p {
+  text-align: center;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.battery-data {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 250px;
+  margin-left: 900px;
+}
+
+.loading-message {
+  font-size: 1.5em;
+  color: #888;
+}
+
+/* Footer styles */
+.app-footer {
+  position: fixed;
+  bottom: 10px;
+  font-size: 0.8em;
+  color: #666;
+  text-align: center;
+  width: 100%;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .app-header {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+
+  .navbar ul li {
+    margin: 0 10px;
+  }
+
+  .navbar ul li a {
+    font-size: 1em;
+  }
+
+  .app-main {
+    padding: 15px;
+  }
+
+  .dashboard h2 {
+    font-size: 1.8em;
+  }
+
+  .battery-info div {
+    width: 45%; /* Make each div take up 45% of the container on medium screens */
+  }
+
+  .battery-info div:last-child {
+    margin-right: 0;
+  }
+
+  .battery-data {
+    font-size: 1.2em;
+  }
+
+  .app-footer {
+    font-size: 0.7em;
+    padding-right: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app-header {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  .navbar ul li {
+    margin: 0 5px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.9em;
+  }
+
+  .app-main {
+    padding: 10px;
+  }
+
+  .dashboard h2 {
+    font-size: 1.6em;
+  }
+
+  .battery-info div {
+    width: 100%; /* Make each div take up full width on small screens */
+    margin-right: 0;
+  }
+
+  .battery-data {
+    font-size: 1.1em;
+  }
+
+  .app-footer {
+    font-size: 0.6em;
+  }
+}

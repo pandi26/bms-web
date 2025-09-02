@@ -1,0 +1,33 @@
+
+.controlManagerHeader{
+    width: 500px;
+}
+.cmh2{
+    margin-left: 700px;
+    margin-top: -230px;
+    width: 200px;
+}
+.cmh4{
+    margin-left: 700px;
+    margin-top: -80px;
+    width: 200px;
+}
+.cmh5{
+    
+    margin-top: -180px;
+    width: 200px;
+}
+.cmh5 button{
+    margin-bottom: 20px;
+}
+.hrtbMain{
+    margin-left: 350px;
+    margin-top: 80px;
+}
+.balanceTestButton{
+    background-color: rgb(56, 56, 156);
+    border-radius: 2px;
+    border: 2px solid #ccc;
+    width: 100px;
+    height: 70px;
+}

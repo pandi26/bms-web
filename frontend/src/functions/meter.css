@@ -1,0 +1,313 @@
+/* Meter.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Custom Properties (Consistent with RtbatteryMonitoring.css) */
+:root {
+  --primary: #00e5ff; /* Cyan */
+  --accent: #ff4081; /* Magenta */
+  --danger: #f50057; /* Red */
+  --secondary: #7b1fa2; /* Violet */
+  --background: #0d1b2a; /* Dark Blue Background */
+  --panel-bg: rgba(255, 255, 255, 0.15); /* Glassmorphic Background */
+  --text-color: #e0e0e0; /* Light Text */
+  --glow-primary: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+  --glow-accent: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 30px var(--accent);
+}
+
+/* Meter Container */
+.meter-container {
+  --gauge-size: 200px; /* Default size for Current meter */
+  --gauge-value: 0; /* Dynamic value (0-100%) */
+  --max-value: 10; /* Max value for Current (A) */
+  --needle-angle: calc(var(--gauge-value) / var(--max-value) * 180deg - 90deg); /* Map value to 0-180deg */
+  
+  width: var(--gauge-size);
+  height: calc(var(--gauge-size) / 1.4);
+  background: var(--panel-bg);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: var(--glow-primary);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 0.5s ease-out;
+  perspective: 1000px; /* Add 3D perspective */
+}
+
+/* Voltage Meter (larger size) */
+.voltage-meter-wrapper .meter-container {
+  --gauge-size: 340px;
+  --max-value: 60; /* Max value for Voltage (V) */
+}
+
+/* Hover Effects */
+.meter-container:hover {
+  transform: scale(1.05) rotateX(5deg); /* 3D tilt effect */
+  box-shadow: var(--glow-accent);
+}
+
+/* Background Halo */
+.meter-container::before {
+  content: '';
+  position: absolute;
+  width: calc(var(--gauge-size) * 1.2);
+  height: calc(var(--gauge-size) * 1.2);
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.2), transparent);
+  border-radius: 50%;
+  animation: haloPulse 3s infinite;
+}
+
+@keyframes haloPulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 0.6; transform: scale(1); }
+}
+
+/* Meter Base (Outer Circle) */
+.meter-base {
+  width: calc(var(--gauge-size) * 0.8);
+  height: calc(var(--gauge-size) * 0.8);
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--primary) 0deg,
+    #40c4ff 45deg,
+    var(--secondary) 90deg,
+    var(--accent) 135deg,
+    var(--danger) 180deg,
+    transparent 180deg,
+    transparent 360deg
+  );
+  position: relative;
+  clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3); /* 3D shadow */
+  transform: rotateX(10deg); /* Slight 3D tilt */
+  animation: shimmer 5s infinite;
+}
+
+/* Shimmer Effect for Meter Base */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Meter Inner Circle (Mask) */
+.meter-inner {
+  width: calc(var(--gauge-size) * 0.65);
+  height: calc(var(--gauge-size) * 0.65);
+  background: linear-gradient(145deg, #1b263b, #0d1b2a);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(10deg);
+  box-shadow: 0 0 15px var(--primary), inset 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+/* Meter Arc (Progress) */
+.meter-arc {
+  width: calc(var(--gauge-size) * 0.8);
+  height: calc(var(--gauge-size) * 0.8);
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--accent) 0deg,
+    var(--accent) calc(var(--gauge-value) / var(--max-value) * 180deg),
+    transparent calc(var(--gauge-value) / var(--max-value) * 180deg),
+    transparent 180deg
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+  box-shadow: 0 0 10px var(--accent);
+  animation: arcGlow 2s infinite;
+}
+
+@keyframes arcGlow {
+  0%, 100% { opacity: 0.7; box-shadow: 0 0 10px var(--accent); }
+  50% { opacity: 1; box-shadow: 0 0 20px var(--accent); }
+}
+
+/* Meter Needle */
+.meter-needle {
+  width: 5px;
+  height: calc(var(--gauge-size) * 0.35);
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(var(--needle-angle));
+  box-shadow: var(--glow-accent);
+  transition: transform 2.5s ease-out;
+}
+
+/* Needle Hover Animation */
+.meter-container:hover .meter-needle {
+  animation: needleWobble 0.5s ease-in-out;
+}
+
+@keyframes needleWobble {
+  0%, 100% { transform: translateX(-50%) rotate(var(--needle-angle)); }
+  25% { transform: translateX(-50%) rotate(calc(var(--needle-angle) + 5deg)); }
+  75% { transform: translateX(-50%) rotate(calc(var(--needle-angle) - 5deg)); }
+}
+
+/* Needle Center */
+.meter-needle::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: var(--primary);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: var(--glow-primary);
+}
+
+/* Value Display */
+.meter-value {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px var(--primary), 0 0 10px var(--accent);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Voltage Meter Value (larger font) */
+.voltage-meter-wrapper .meter-value {
+  font-size: 20px;
+}
+
+/* Tick Marks and Labels */
+.meter-ticks {
+  position: absolute;
+  width: calc(var(--gauge-size) * 0.8);
+  height: calc(var(--gauge-size) * 0.8);
+  top: 0;
+  left: 0;
+}
+
+.tick {
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background: var(--text-color);
+  transform-origin: center 50%;
+  box-shadow: 0 0 5px var(--primary);
+}
+
+/* Tick Labels */
+.tick-label {
+  position: absolute;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  color: var(--text-color);
+  text-shadow: 0 0 3px var(--primary);
+  transform: translate(-50%, -50%);
+}
+
+/* Specific tick positions for Current (0-10) */
+.tick-0 { transform: rotate(-90deg) translate(calc(var(--gauge-size) * 0.35)) translateY(-10px); }
+.tick-5 { transform: rotate(0deg) translate(calc(var(--gauge-size) * 0.35)) translateY(-10px); }
+.tick-10 { transform: rotate(90deg) translate(calc(var(--gauge-size) * 0.35)) translateY(-10px); }
+
+.tick-label-0 { bottom: 10%; left: 15%; }
+.tick-label-5 { bottom: 0; left: 50%; }
+.tick-label-10 { bottom: 10%; right: 15%; }
+
+/* Specific tick positions for Voltage (0-60) */
+.voltage-meter-wrapper .tick-0 { transform: rotate(-90deg) translate(calc(var(--gauge-size) * 0.35)) translateY(-10px); }
+.voltage-meter-wrapper .tick-30 { transform: rotate(0deg) translate(calc(var(--gauge-size) * 0.35)) translateY(-10px); }
+.voltage-meter-wrapper .tick-60 { transform: rotate(90deg) translate(calc(var(--gauge-size) * 0.35)) translateY(-10px); }
+
+.voltage-meter-wrapper .tick-label-0 { bottom: 10%; left: 15%; }
+.voltage-meter-wrapper .tick-label-30 { bottom: 0; left: 50%; }
+.voltage-meter-wrapper .tick-label-60 { bottom: 10%; right: 15%; }
+
+/* Tooltip */
+.meter-tooltip {
+  position: relative;
+}
+
+.meter-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--panel-bg);
+  color: var(--text-color);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  box-shadow: var(--glow-primary);
+}
+
+.meter-tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ripple Effect on Hover */
+.meter-base::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.meter-container:hover .meter-base::after {
+  width: calc(var(--gauge-size) * 0.8);
+  height: calc(var(--gauge-size) * 0.8);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { transform: translateY(30px) rotateX(0deg); opacity: 0; }
+  to { transform: translateY(0) rotateX(10deg); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .meter-container {
+    --gauge-size: 150px;
+  }
+
+  .voltage-meter-wrapper .meter-container {
+    --gauge-size: 250px;
+  }
+
+  .meter-value {
+    font-size: 16px;
+  }
+
+  .voltage-meter-wrapper .meter-value {
+    font-size: 18px;
+  }
+
+  .tick-label {
+    font-size: 8px;
+  }
+}
